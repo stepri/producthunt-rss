@@ -19,7 +19,7 @@ app.get('/rss/post/all', function (req, res) {
     null
   );
 
-  oa.get('https://api.producthunt.com/v1/posts/all', process.env.DEV_KEY, function(err, data) {
+  oa.get('https://api.producthunt.com/v1/posts/all', process.env.DEV_TOKEN, function(err, data) {
 
     if (err) {
 
