@@ -36,7 +36,7 @@ app.get('/rss/post/all', function (req, res) {
       _.each(data.posts, function(post){
         feed.item({
           title: post.name + ' - ' + post.tagline,
-          description: '<img src="'+post.screenshot_url['850px']+'"><br><a href="'+post.discussion_url+'">Discussion link</a><br>Votes: '+post.votes_count+'<br>Comments: '+post.comments_count,
+          description: '<img src="'+post.screenshot_url['850px']+'"><br><a href="'+post.discussion_url+'">Discussion link</a> - Votes: '+post.votes_count+' - Comments: '+post.comments_count,
           url: post.redirect_url, // link to the item 
           guid: post.id, // optional - defaults to url 
           author: post.user.name + ' (@'+post.user.username+')', // optional - defaults to feed author property 
