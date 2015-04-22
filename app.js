@@ -10,6 +10,10 @@ app.get('/', function (req, res) {
   res.redirect('/rss/posts/all');
 });
 
+app.get('/favicon.ico', function (req, res) {
+  res.redirect('https://www.producthunt.com/favicon.ico');
+});
+
 app.get('/rss/posts/all', function (req, res) {
 
   req.cached = cache.get('posts/all');
