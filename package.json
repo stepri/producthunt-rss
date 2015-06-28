@@ -6,9 +6,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.12.3",
-    "memory-cache": "^0.1.2",
-    "oauth": "^0.9.12",
+    "express": "^4.13.0",
+    "memory-cache": "^0.1.4",
+    "oauth": "^0.9.13",
     "rss": "^1.1.1",
     "underscore": "^1.8.3"
   }
