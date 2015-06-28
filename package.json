@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "^4.13.0",
     "memory-cache": "^0.1.4",
+    "morgan": "^1.6.0",
     "oauth": "^0.9.13",
     "rss": "^1.1.1",
     "underscore": "^1.8.3"

@@ -2,9 +2,12 @@ var OAuth = require('oauth');
 var RSS = require('rss');
 var _ = require('underscore');
 var cache = require('memory-cache');
+var morgan = require('morgan');
 
 var express = require('express');
 var app = express();
+
+app.use(morgan(':date[web] - :method :url :status :res[content-length] - :response-time ms'))
 
 app.get('/', function (req, res) {
   res.redirect('/rss/posts/all');
@@ -60,7 +63,7 @@ app.get('/rss/posts/all', function (req, res) {
 
         var xml = feed.xml();
 
-        cache.put('posts/all', xml, 300000)
+        cache.put('posts/all', xml, 300000);
 
         res.send(xml);
    
